@@ -34,8 +34,6 @@ const store = makeInMemoryStore({
         console.log(m);
         if(!m.message) return;
         if (m.key && m.key.remoteJid === "status@broadcast") return;
-        if (!botWa.public && !m.key.fromMe && chatUpdate.type === "notify")
-        return;
         if (m.key.id.startsWith("BAE5") && m.key.id.length === 16) return;
 
        require("./main")(botWa, chatUpdate, store);
