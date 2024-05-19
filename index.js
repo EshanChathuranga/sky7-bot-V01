@@ -31,7 +31,6 @@ const store = makeInMemoryStore({
 
       try {
         m = chatUpdate.messages[0];
-        console.log(m);
         if(!m.message) return;
         if (m.key && m.key.remoteJid === "status@broadcast") return;
         if (m.key.id.startsWith("BAE5") && m.key.id.length === 16) return;
