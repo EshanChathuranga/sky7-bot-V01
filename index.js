@@ -83,6 +83,7 @@ const store = makeInMemoryStore({
             connectToWhatsapp();
           } else {
             console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
+            connectToWhatsapp();
           }
         }
         console.log('Connected...', update)
